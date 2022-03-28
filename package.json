@@ -1,0 +1,41 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Hi",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreamland-Code/TheLibrery-Backend.git"
+  },
+  "keywords": [
+    "js",
+    "sequalize",
+    "express",
+    "json",
+    "api",
+    "node",
+    "backend",
+    "sql"
+  ],
+  "author": "Dreamland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dreamland-Code/TheLibrery-Backend/issues"
+  },
+  "homepage": "https://github.com/Dreamland-Code/TheLibrery-Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
