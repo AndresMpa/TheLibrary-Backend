@@ -4,38 +4,38 @@ import { History } from './History.js'
 
 export const User = sequelize.define(
     'user', {
-        'cc': {
+        cc: {
             type: DataTypes.STRING,
             primaryKey: true
         },
-        'permission': {
+        permission: {
             type: DataTypes.INTEGER
         },
-        'name': {
+        name: {
             type: DataTypes.STRING
         },
-        'last_name': {
+        last_name: {
             type: DataTypes.STRING
         },
-        'birthday': {
+        birthday: {
             type: DataTypes.DATE
         },
-        'gender': {
+        gender: {
             type: DataTypes.STRING
         },
-        'mail': {
+        mail: {
             type: DataTypes.STRING
         },
-        'user_account': {
+        user_account: {
             type: DataTypes.STRING
         },
-        'password_account': {
+        password_account: {
             type: DataTypes.STRING
         },
-        'news_feed': {
+        news_feed: {
             type: DataTypes.BOOLEAN
         },
-        'preferences': {
+        preferences: {
             type: DataTypes.STRING
         }
     }, {

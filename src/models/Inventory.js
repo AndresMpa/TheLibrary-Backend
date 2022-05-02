@@ -5,23 +5,23 @@ import { History } from './History.js'
 
 export const Inventory = sequelize.define(
     'inventory', {
-        'id_inventory': {
+        id_inventory: {
             type: DataTypes.STRING, 
             primaryKey: true
         },
-        'issn': {
+        issn: {
             type: DataTypes.STRING
         },
-        'language': {
+        language: {
             type: DataTypes.STRING
         },
-        'state': {
+        state: {
             type: DataTypes.INTEGER
         },
-        'price': {
+        price: {
             type: DataTypes.FLOAT
         },
-        'reserved': {
+        reserved: {
             type: DataTypes.BOOLEAN
         }
     }, {
@@ -29,8 +29,8 @@ export const Inventory = sequelize.define(
     }
 );
 
-Inventory.hasOne(News);
-News.belongsTo(Inventory);
+Inventory.hasOne(News, {foreignKey: 'inventoryId'});
+News.belongsTo(Inventory, {foreignKey: 'inventoryId'});
 
-Inventory.hasOne(History);
-History.belongsTo(Inventory);
+Inventory.hasOne(History, {foreignKey: 'inventoryId'});
+History.belongsTo(Inventory, {foreignKey: 'inventoryId'});

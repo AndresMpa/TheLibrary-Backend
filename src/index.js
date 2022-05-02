@@ -1,4 +1,9 @@
 import { sequelize } from './database/database.js';
+import { Book } from './models/Book.js'
+import { History } from './models/History.js'
+import { Inventory } from './models/Inventory.js'
+import { News } from './models/News.js'
+import { User } from './models/User.js'
 import cors from 'cors';
 import path from 'path';
 import morgan from 'morgan';
@@ -14,11 +19,11 @@ app.use(express.urlencoded({ extended: true }));
 app.set('port', process.env.PORT || 3000);
 
 async function syncDb() {
-    await sequelize.sync({force: true});
+    await sequelize.sync({force: false});
 }
 
 if (process.env.NODE_ENV !== 'test') {
-    syncDb()
+    syncDb();
     app.listen(app.get('port'), () => {
         console.log('Server on port ' + app.get('port') + ' on dev');
     });

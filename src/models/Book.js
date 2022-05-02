@@ -4,29 +4,29 @@ import { Inventory } from './Inventory.js'
 
 export const Book = sequelize.define(
     'book', {
-        'issn': {
+        issn: {
             type: DataTypes.STRING, 
             primaryKey: true
         },
-        'title': {
+        title: {
             type: DataTypes.STRING
         },
-        'author': {
+        author: {
             type: DataTypes.STRING
         },
-        'year': {
+        year: {
             type: DataTypes.INTEGER
         },
-        'genre': {
+        genre: {
             type: DataTypes.STRING
         },
-        'number_pages': {
+        number_pages: {
             type: DataTypes.INTEGER
         },
-        'editorial': {
+        editorial: {
             type: DataTypes.STRING
         },
-        'published': {
+        published: {
             type: DataTypes.DATE
         }
     }, {

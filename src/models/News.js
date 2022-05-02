@@ -1,19 +1,19 @@
 import { DataTypes } from 'sequelize'
 import { sequelize } from '../database/database.js'
 
-export const news = sequelize.define(
+export const News = sequelize.define(
     'news', {
-        'id_inventory': {
+        id_inventory: {
             type: DataTypes.STRING,
             primaryKey: true
         },
-        'news_title': {
+        news_title: {
             type: DataTypes.STRING
         },
-        'description': {
-            type: Sequelize.STRING
+        description: {
+            type: DataTypes.STRING
         },
-        'removed_at': {
+        removed_at: {
             type: DataTypes.DATE
         }
     }, {

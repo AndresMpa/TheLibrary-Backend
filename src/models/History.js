@@ -3,14 +3,14 @@ import { sequelize } from '../database/database.js'
 
 export const History = sequelize.define(
     'history', {
-        'id_inventory': {
+        id_inventory: {
             type: DataTypes.STRING,
             primaryKey: true
         },
-        'cc': {
+        cc: {
             type: DataTypes.STRING
         },
-        'purshased': {
+        purshased: {
             type: DataTypes.BOOLEAN
         }
     }, {
