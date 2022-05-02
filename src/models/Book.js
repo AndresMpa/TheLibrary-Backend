@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize'
 import { sequelize } from '../database/database.js'
+import { Inventory } from './Inventory.js'
 
 export const Book = sequelize.define(
     'book', {
@@ -25,22 +26,24 @@ export const Book = sequelize.define(
         'editorial': {
             type: DataTypes.STRING
         },
-        'language': {
-            type: DataTypes.STRING
-        },
         'published': {
             type: DataTypes.DATE
-        },
-        'state': {
-            type: DataTypes.STRING
-        },
-        'price': {
-            type: DataTypes.FLOAT
-        },
-        'reserved': {
-            type: DataTypes.BOOLEAN
         }
     }, {
         freezeTableName: true
     }
 )
+
+Book.hasMany(
+    Inventory, {
+      foreignKey: 'bookId',
+      sourceKey: 'issn'
+    }
+  );
+  
+Inventory.belongsTo(
+    Book, {
+        foreignKey: 'bookId',
+        targetId: 'id_inventory'
+    }
+);

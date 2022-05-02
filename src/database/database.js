@@ -2,11 +2,16 @@ import Sequelize from 'sequelize';
 
 const LOCAL_ENV = true
 
+let dbName      = '';
+let user        = '';
+let password    = '';
+let dbHost      = '';
+
 if (LOCAL_ENV) {
-    dbName      = '';
-    user        = '';
+    dbName      = 'db_library';
+    user        = 'root';
     password    = '';
-    dbHost      = '';
+    dbHost      = 'localhost';
 } else {
     dbName      = '';
     user        = '';

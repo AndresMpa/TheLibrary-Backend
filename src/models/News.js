@@ -2,8 +2,8 @@ import { DataTypes } from 'sequelize'
 import { sequelize } from '../database/database.js'
 
 export const news = sequelize.define(
-    'new', {
-        'issn': {
+    'news', {
+        'id_inventory': {
             type: DataTypes.STRING,
             primaryKey: true
         },

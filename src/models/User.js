@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize'
 import { sequelize } from '../database/database.js'
+import { History } from './History.js'
 
 export const User = sequelize.define(
     'user', {
@@ -42,3 +43,17 @@ export const User = sequelize.define(
         timestamps: false
     }
 )
+
+User.hasMany(
+    History, {
+      foreignKey: 'userId',
+      sourceKey: 'cc'
+    }
+  );
+  
+History.belongsTo(
+    User, {
+        foreignKey: 'userId',
+        targetId: 'id_inventory'
+    }
+);

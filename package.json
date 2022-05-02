@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "backend del proyecto",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo Hi",
     "start": "nodemon src/index.js"
