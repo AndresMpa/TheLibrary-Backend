@@ -2,10 +2,14 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('news', {
-      id_inventory: {
-        type: Sequelize.STRING,
+      id_news: {
+        type: Sequelize.INTEGER,
         primaryKey: true,
         allowNull: false,
+        autoIncrement: true
+      },
+      id_inventory: {
+        type: Sequelize.STRING,
         references: {
           model: "inventories",
           key: "id_inventory"

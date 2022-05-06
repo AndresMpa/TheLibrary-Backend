@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   news.init({
+    id_inventory: DataTypes.STRING,
     news_title: DataTypes.STRING,
     description: DataTypes.STRING,
     removed_at: DataTypes.DATE

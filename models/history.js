@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   history.init({
+    id_inventory: DataTypes.STRING,
     cc: DataTypes.STRING,
     purchased: DataTypes.BOOLEAN
   }, {
