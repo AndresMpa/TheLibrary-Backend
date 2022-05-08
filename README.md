@@ -1,3 +1,4 @@
 # TheLibrery-Backend
-Backend for "TheLibrary"
-https://www.freemysqlhosting.net/
+Backend for "TheLibrary"  
+Hosting for db https://www.freemysqlhosting.net/  
+GUI for db https://www.phpmyadmin.co/
