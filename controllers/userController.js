@@ -19,10 +19,22 @@ const tokenService = require("../services/token.js");
 module.exports = {
   test: async (req, res, next) => {
     try {
-      const reg = {
-        message: "user",
-      };
-      res.status(200).json(reg);
+      console.log(req.body);
+      if (req.body.name === "Admin" && req.body.password === "123") {
+        let tokenReturn = await tokenService.encode({
+          permission: 1,
+          name: "Admin",
+          last_name: "Test",
+          birthday: "data",
+          gender: "Man",
+          mail: "test@gmail.com",
+          user_account: "Admin",
+          password_account: "-un-hash-",
+          news_feed: true,
+          preferences: [],
+        });
+        res.status(200).json({ auth: true, tokenReturn });
+      }
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
