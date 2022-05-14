@@ -1,16 +1,3 @@
-const models = require("../models");
-
-// Modelo a usar
-/*
-    title: DataTypes.STRING,
-    author: DataTypes.STRING,
-    year: DataTypes.INTEGER,
-    genre: DataTypes.STRING,
-    number_pages: DataTypes.INTEGER,
-    editorial: DataTypes.STRING,
-    published: DataTypes.DATE
-*/
-
 module.exports = {
   test: async (req, res, next) => {
     try {
@@ -244,10 +231,11 @@ module.exports = {
       next(e);
     }
   },
-  add: async (req, res, next) => {
+  list: async (req, res, next) => {
     try {
-      const reg = await models.Book.create(req.body);
-      res.status(200).json(reg);
+      const results = await await models.Book.findAll();
+      console.log(results);
+      res.status(200).json(results);
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
@@ -255,10 +243,11 @@ module.exports = {
       next(e);
     }
   },
-  list: async (req, res, next) => {
-    console.log(req);
+  addBook: async (req, res, next) => {
     try {
-      const reg = await models.Book.findAll();
+      const reg = {
+        message: "AddBook"
+      }
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

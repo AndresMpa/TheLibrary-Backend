@@ -1,14 +1,3 @@
-const models = require("../models");
-
-// Modelo a usar
-/*
-    issn: DataTypes.STRING,
-    language: DataTypes.STRING,
-    state: DataTypes.INTEGER,
-    price: DataTypes.FLOAT,
-    reserved: DataTypes.BOOLEAN
-*/
-
 module.exports = {
   test: async (req, res, next) => {
     try {
@@ -26,7 +15,9 @@ module.exports = {
 
   add: async (req, res, next) => {
     try {
-      const reg = await models.history.create(req.body);
+const reg = {
+        message: "add",
+      };
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

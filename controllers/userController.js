@@ -1,21 +1,3 @@
-const models = require("../models");
-const bcrypt = require("bcryptjs");
-const tokenService = require("../services/token.js");
-
-// Modelo a usar
-/*
-    permission: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    birthday: DataTypes.DATE,
-    gender: DataTypes.STRING,
-    mail: DataTypes.STRING,
-    user_account: DataTypes.STRING,
-    password_account: DataTypes.STRING,
-    news_feed: DataTypes.BOOLEAN,
-    preferences: DataTypes.STRING
-*/
-
 module.exports = {
   test: async (req, res, next) => {
     try {

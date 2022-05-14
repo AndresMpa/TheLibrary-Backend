@@ -1,12 +1,3 @@
-const models = require("../models");
-
-// Modelo a usar
-/*
-    id_inventory: DataTypes.STRING,
-    cc: DataTypes.STRING,
-    purchased: DataTypes.BOOLEAN
-*/
-
 module.exports = {
   test: async (req, res, next) => {
     try {
@@ -24,7 +15,9 @@ module.exports = {
 
   add: async (req, res, next) => {
     try {
-      const reg = await models.history.create(req.body);
+      const reg = {
+        message: "created",
+      };
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

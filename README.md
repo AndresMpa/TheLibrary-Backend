@@ -1,4 +1,5 @@
 # TheLibrery-Backend
-Backend for "TheLibrary"  
-Hosting for db https://www.freemysqlhosting.net/  
-GUI for db https://www.phpmyadmin.co/
+
+Backend for "TheLibrary"
+
+Se ha optado por usar un sistem de archivos en lugar de una base de datos como tal
