@@ -9,7 +9,6 @@ const models = require("../models");
 
 module.exports = {
   test: async (req, res, next) => {
-    console.log(req);
     try {
       const reg = {
         message: "history",
