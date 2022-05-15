@@ -1,20 +1,24 @@
+const tokenService = require("../services/token");
+
 module.exports = {
   test: async (req, res, next) => {
     try {
-      console.log(req.body);
+      //Acá se ha de hacer una función que vaya a los registros de usuario y valide si el registro existe
       if (req.body.name === "Admin" && req.body.password === "123") {
-        let tokenReturn = await tokenService.encode({
-          permission: 1,
-          name: "Admin",
-          last_name: "Test",
-          birthday: "data",
-          gender: "Man",
-          mail: "test@gmail.com",
-          user_account: "Admin",
-          password_account: "-un-hash-",
-          news_feed: true,
-          preferences: [],
-        });
+        // Acá se crean las respuestas usando el servicios, todos los registros tiene que tener la estructura de abajo
+        let tokenReturn = await tokenService.encode(
+          // Acá es donde ser cargan los archivos
+          {
+            permission: 1,
+            mail: "",
+            address: "",
+            user_account: "Admin",
+            password: "",
+            news_feed: false,
+            preferences: [],
+          }
+        );
+        // Si el tipo de usuario no es Administrador se debería de responder auth false
         res.status(200).json({ auth: true, tokenReturn });
       }
     } catch (e) {
