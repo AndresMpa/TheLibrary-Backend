@@ -9,7 +9,6 @@ module.exports = {
         email: user.mail,
         address: user.address,
         username: user.user_account,
-        password: user.password,
         feed: user.news_feed,
         preferences: user.preferences,
       },
