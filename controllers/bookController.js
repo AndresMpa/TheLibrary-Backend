@@ -1,5 +1,5 @@
 module.exports = {
-  test: async (req, res, next) => {
+  list: async (req, res, next) => {
     try {
       const reg = [
         [
@@ -231,11 +231,50 @@ module.exports = {
       next(e);
     }
   },
-  list: async (req, res, next) => {
+  top: async (req, res, next) => {
     try {
-      const results = await await models.Book.findAll();
-      console.log(results);
-      res.status(200).json(results);
+      const reg = [
+        {
+          asset: "https://www.latercera.com/resizer/LTN5QsS3yo6u_oNmub2HNEcv-f4=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/3QOVU47ZLRATTJQREKLUL5BBRA.jpg",
+          title: "Antologia de Terror",
+          author: "LoveCraft",
+        },
+        {
+          asset: "https://www.latercera.com/resizer/LTN5QsS3yo6u_oNmub2HNEcv-f4=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/3QOVU47ZLRATTJQREKLUL5BBRA.jpg",
+          title: "Mago de oz el mundo perdido",
+          author: "Oscar de la Frielda",
+        },
+        {
+          asset: "https://www.latercera.com/resizer/LTN5QsS3yo6u_oNmub2HNEcv-f4=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/3QOVU47ZLRATTJQREKLUL5BBRA.jpg",
+          title: "Como torturar estudiantes",
+          author: "Felipe Castillo",
+        },
+        {
+          asset: "https://www.latercera.com/resizer/LTN5QsS3yo6u_oNmub2HNEcv-f4=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/3QOVU47ZLRATTJQREKLUL5BBRA.jpg",
+          title: "Caminar por las cuerdas de la vida, tomo 1",
+          author: "Per Turnum",
+        },
+      ];
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
+  getABook: async (req, res, next) => {
+    try {
+      const reg = [
+        {
+          asset: "https://librosenlinea.co/wp-content/uploads/2020/01/antologia.jpg",
+          title: "Antología de terror",
+          author: "H. P LoveCraft",
+          description:
+            "Este libro es una guía exhaustiva para adentrarse en los siniestros bosques que alberga el alma del escritor, sus relatos expresan la soledad y la pequeñez de la condición humana en un universo infinito",
+        },
+      ];
+      res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
@@ -246,8 +285,8 @@ module.exports = {
   addBook: async (req, res, next) => {
     try {
       const reg = {
-        message: "AddBook"
-      }
+        message: "AddBook",
+      };
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

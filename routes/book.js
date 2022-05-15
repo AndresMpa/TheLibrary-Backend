@@ -4,7 +4,8 @@ const auth = require("../middlewares/auth");
 // Instance
 const router = routerx();
 
-router.get("/test", bookController.test);
+router.get("/top", bookController.top);
 router.get("/list", bookController.list);
+router.post("/one-book", bookController.getABook);
 
 module.exports = router;
