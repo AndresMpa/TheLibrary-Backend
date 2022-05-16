@@ -4,7 +4,7 @@ const auth = require("../middlewares/auth");
 // Instance
 const router = routerx();
 
-router.get("/top", bookController.top);
+router.get("/top", auth.verifyClient, bookController.top);
 router.get("/list", bookController.list);
 router.delete("/remove", bookController.remove);
 router.get("/raw-list", bookController.rawList);

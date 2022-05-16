@@ -9,6 +9,5 @@ router.get('/cancelled', historyController.cancelled);
 router.get('/delivered', historyController.delivered);
 router.get('/returned', historyController.returned);
 router.get('/reserves', historyController.reserves);
-router.post('/add', auth.verifyAdmin, historyController.add);
 
 module.exports = router;

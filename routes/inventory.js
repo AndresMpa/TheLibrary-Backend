@@ -5,6 +5,6 @@ const auth = require('../middlewares/auth');
 const router = routerx();
 
 router.get('/test', inventoryController.test);
-router.post('/add',auth.verifyClient, inventoryController.add);
+router.post('/add', auth.verifyClient, inventoryController.add);
 
 module.exports = router;
