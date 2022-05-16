@@ -498,6 +498,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -507,6 +510,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -516,6 +522,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -525,6 +534,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -534,6 +546,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -543,6 +558,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -552,6 +570,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -561,6 +582,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -570,6 +594,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -579,6 +606,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -588,6 +618,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -597,6 +630,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/11/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -608,6 +644,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -617,6 +656,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -626,6 +668,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -635,6 +680,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -644,6 +692,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -653,6 +704,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -662,6 +716,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -671,6 +728,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -680,6 +740,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -689,6 +752,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -698,6 +764,9 @@ module.exports = {
             title: "El príncipe",
             author: "Nicolás Maquiavelo",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
           },
@@ -707,6 +776,9 @@ module.exports = {
             title: "El Maravilloso Mago de Oz",
             author: "L. Frank Baum",
             asset: "https://picsum.photos/id/10/500/300",
+            issn: "4317-8478",
+            price: 80000,
+            discount: 0.2,
             summary:
               "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
           },
@@ -830,7 +902,7 @@ module.exports = {
   },
   searchBook: async (req, res, next) => {
     try {
-      if (levenshtein.get(req.body.query, "El príncipe") >= 6) {
+      if (levenshtein.get(req.body.query, "El príncipe") >= 3) {
         const reg = [
           [
             {
@@ -847,8 +919,8 @@ module.exports = {
         res.status(200).json(reg);
       } else {
         res.status(404).json({
-          message: "No matches"
-        })
+          message: "No matches",
+        });
       }
     } catch (e) {
       res.status(500).send({
