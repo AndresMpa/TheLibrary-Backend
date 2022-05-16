@@ -9,5 +9,6 @@ router.get("/list", bookController.list);
 router.delete("/remove", bookController.remove);
 router.get("/raw-list", bookController.rawList);
 router.post("/one-book", bookController.getABook);
+router.post("/search", bookController.searchBook);
 
 module.exports = router;

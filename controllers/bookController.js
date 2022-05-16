@@ -1,3 +1,5 @@
+const levenshtein = require("fast-levenshtein");
+
 module.exports = {
   /*
   Estos son los campos que debería de contener cada ejemplar
@@ -813,13 +815,41 @@ module.exports = {
       next(e);
     }
   },
-
   addBook: async (req, res, next) => {
     try {
       const reg = {
         message: "AddBook",
       };
       res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
+  searchBook: async (req, res, next) => {
+    try {
+      if (levenshtein.get(req.body.query, "El príncipe") >= 6) {
+        const reg = [
+          [
+            {
+              rating: 4.5,
+              votes: "450",
+              title: "El príncipe",
+              author: "Nicolás Maquiavelo",
+              asset: "https://picsum.photos/id/11/500/300",
+              summary:
+                "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
+            },
+          ],
+        ];
+        res.status(200).json(reg);
+      } else {
+        res.status(404).json({
+          message: "No matches"
+        })
+      }
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
