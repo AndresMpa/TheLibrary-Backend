@@ -1,4 +1,5 @@
 const tokenService = require("../services/token");
+const bcrypt = require("bcryptjs/dist/bcrypt");
 
 module.exports = {
   signin: async (req, res, next) => {
@@ -49,8 +50,11 @@ module.exports = {
   },
   createAccount: async (req, res, next) => {
     try {
-      req.body.password = bcrypt.hashSync(req.body.password, 8);
-      const reg = await db.user.create(req.body);
+      //req.body.password = bcrypt.hashSync(req.body.password, 8);
+      console.log(`Agregar ${req.body.name} a los archivos`);
+      const reg = {
+        message: `Se agrego ${req.body.name}`
+      }
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

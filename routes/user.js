@@ -5,6 +5,6 @@ const auth = require("../middlewares/auth");
 const router = routerx();
 
 router.post("/signin", userController.signin);
-router.post("/createAccount", userController.createAccount);
+router.post("/create", userController.createAccount);
 
 module.exports = router;
