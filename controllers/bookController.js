@@ -18,10 +18,11 @@ module.exports = {
   list: async (req, res, next) => {
     try {
       file = await util.openStorage(storege);
-      const reg = util.dimensionIncreaser(file, 10);
-      //console.log(reg);
+      console.log(file);
+
       
-      res.status(200).json(loader.list());
+      const reg = util.dimensionIncreaser(file, 10);
+      res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
@@ -81,7 +82,8 @@ module.exports = {
   searchBook: async (req, res, next) => {
     try {
       if (levenshtein.get(req.body.query, "El príncipe") >= 3) {
-        const reg =  util.dimensionIncreaser(loader.rawData()[Math.floor(Math.random() * (0 - 8))], 10);
+        let data = loader.rawData()[Math.floor(Math.random() * (0 - 8))]
+        const reg =  util.dimensionIncreaser(data, 10);
         res.status(200).json(reg);
       } else {
         res.status(404).json({

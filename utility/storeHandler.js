@@ -1,12 +1,10 @@
-const fs = require("fs");
-const readline = require("readline");
+const fs = require("fs/promises");
 
-const cleanFile = (rawData) => {
-  let cleanData = rawData.split("\n");
-  cleanData.pop();
-  return cleanData.map((data) => {
-    return JSON.parse(JSON.stringify(data));
-  });
+// Recoge los json para regresar un array de una dimensión con
+// la información del JSON
+const fileFormatter = (rawData) => {
+  let jsonFormattedData = JSON.parse(rawData);
+  return Object.keys(jsonFormattedData).map((item) => jsonFormattedData[item]);
 };
 
 module.exports = {
@@ -16,21 +14,19 @@ module.exports = {
   Constraints (Restricciones):
   - Regresa la información como un array array
   */
-  openStorage: async (path, ext = "txt") => {
+  openStorage: async (path, ext = "json") => {
     try {
-      let fileFromStorage = await fs.readFileSync(`${path}.${ext}`, {
-        encoding: "utf8",
-      });
-      return cleanFile(fileFromStorage);
+      let fileFromStorage = await fs.readFile(`${path}.${ext}`);
+      return fileFormatter(fileFromStorage);
     } catch (error) {
       console.error(error);
     }
   },
   // Función para escribir los datos del storage, complementa
   // openStorage()
-  writeStorage: async (path, ext, content) => {
+  writeStorage: async (path, ext="json", content) => {
     try {
-      await fs.writeFile(path + ext, content);
+      await fs.writeFile(`${path}.${ext}`, JSON.stringify(content));
     } catch (error) {
       console.log(error);
     }
