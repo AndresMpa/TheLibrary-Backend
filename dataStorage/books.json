@@ -62,7 +62,7 @@
     "release": 2020,
     "year": 1513,
     "price": 80000,
-    "discount": 1.0,
+    "discount": 0.1,
     "summary": "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
     "asset": "https://picsum.photos/id/11/500/300",
     "rating": 5.0
@@ -79,9 +79,9 @@
     "release": 1600,
     "year": 1,
     "price": 66000,
-    "discount": 5.0,
+    "discount": 0.5,
     "summary": "El Necronomicón es un grimorio ficticio ideado por el escritor estadounidense H. P. Lovecraft, uno de los maestros de la literatura de terror y ciencia ficción. Es mencionado por primera vez en el cuento Laciudad sinnombre de 1921 donde también se indica que su autor fue el árabeloco Abdul Alhazred",
-    "asset": "https: //picsum.photos/id/11/500/300",
+    "asset": "https://picsum.photos/id/11/500/300",
     "rating": 0.0
   }
 }
