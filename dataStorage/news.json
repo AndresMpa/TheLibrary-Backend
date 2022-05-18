@@ -1,0 +1,12 @@
+{
+  "0": {
+    "icon": "mdi-party-popper",
+    "color": "deep-yellow accent-4",
+    "content": "Se abre la platafor para el público general"
+  },
+  "1": {
+    " icon": "mdi-lock",
+    "color": "deep-blue accent-4",
+    "content": "Se han mejorado caracteristicas de seguridad de la plataforma"
+  }
+}
