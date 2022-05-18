@@ -1,4 +1,13 @@
-const fs = require("fs/promises");
+const fs = require("fs");
+const readline = require("readline");
+
+const cleanFile = (rawData) => {
+  let cleanData = rawData.split("\n");
+  cleanData.pop();
+  return cleanData.map((data) => {
+    return JSON.parse(JSON.stringify(data));
+  });
+};
 
 module.exports = {
   // Función para acceder a los datos del storage, requiere de
@@ -7,12 +16,12 @@ module.exports = {
   Constraints (Restricciones):
   - Regresa la información como un array array
   */
-  openStorage: async (path, ext) => {
+  openStorage: async (path, ext = "txt") => {
     try {
-      const fileFromStorage = await fs.readFile(path + ext, {
+      let fileFromStorage = await fs.readFileSync(`${path}.${ext}`, {
         encoding: "utf8",
       });
-      return Array.from(fileFromStorage);
+      return cleanFile(fileFromStorage);
     } catch (error) {
       console.error(error);
     }
@@ -34,16 +43,20 @@ module.exports = {
   /*
   Alias: Zipper
   */
-  dimensionIncreaser: (rawPlainData, dimension) => {
+  dimensionIncreaser: (rawPlainData, dimensionSize) => {
     let increasedData = [];
     let zippedData = [];
     rawPlainData.forEach((item) => {
-      if (zippedData.length === dimension) {
+      if (zippedData.length === dimensionSize) {
         increasedData.push(zippedData);
         zippedData = [];
       }
       zippedData.push(item);
     });
+
+    if (zippedData.length < dimensionSize) {
+      increasedData.push(zippedData);
+    }
     return increasedData;
   },
   // Disminuye las dimensiones de un array
