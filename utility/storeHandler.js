@@ -24,7 +24,7 @@ module.exports = {
   },
   // Función para escribir los datos del storage, complementa
   // openStorage()
-  writeStorage: async (path, ext="json", content) => {
+  writeStorage: async (path, ext = "json", content) => {
     try {
       await fs.writeFile(`${path}.${ext}`, JSON.stringify(content));
     } catch (error) {
@@ -91,5 +91,20 @@ module.exports = {
       element[`${field}`] === query;
 
     return rawData.findIndex((element) => constranits(element, field, query));
+  },
+  // Order data inside an array of JSON using a numeric field as
+  // discriminant
+  /*
+  Hint / Tips:
+  - "a" means ascendining sort
+  */
+  orderByFiled: (data, field, order = "a") => {
+    return order === "a"
+      ? data.sort(
+          (itemA, itemB) => parseFloat(itemB[field]) - parseFloat(itemA[field])
+        )
+      : data.sort(
+          (itemA, itemB) => parseFloat(itemA[field]) - parseFloat(itemB[field])
+        );
   },
 };
