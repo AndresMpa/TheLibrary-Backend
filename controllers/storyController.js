@@ -1,6 +1,10 @@
+const util = require("../utility/storeHandler");
+const storage = `${process.cwd()}/dataStorage/story`;
+
 module.exports = {
   all: async (req, res, next) => {
     try {
+      console.log(req.body.username);
       const reg = [
         {
           date: "27/Mar/2002",

@@ -3,7 +3,7 @@ const routerx = require('express-promise-router');
 const userRouter = require('./user');
 const bookRouter = require('./book');
 const newsRouter = require('./news');
-const historyRouter = require('./history');
+const storyRouter = require('./story');
 const inventoryRouter = require('./inventory');
 // Instances
 const router = routerx();
@@ -11,7 +11,7 @@ const router = routerx();
 router.use('/user', userRouter);
 router.use('/book', bookRouter);
 router.use('/news', newsRouter);
-router.use('/history', historyRouter);
+router.use('/story', storyRouter);
 router.use('/inventory', inventoryRouter);
 
 module.exports = router;
