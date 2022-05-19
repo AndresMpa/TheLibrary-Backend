@@ -1,6 +1,5 @@
 const levenshtein = require("fast-levenshtein");
 const util = require("../utility/storeHandler");
-const loader = require("../utility/BDloader");
 const storage = `${process.cwd()}/dataStorage/books`;
 
 module.exports = {
