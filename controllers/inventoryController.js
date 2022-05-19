@@ -1,10 +1,11 @@
+const util = require("../utility/storeHandler");
+const storage = `${process.cwd()}/dataStorage/inventory`;
+
 module.exports = {
-  test: async (req, res, next) => {
+  rawList: async (req, res, next) => {
     try {
-      const reg = {
-        message: "inventory",
-      };
-      res.status(200).json(reg);
+      let file = await util.openStorage(storage);
+      res.status(200).json(file);
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
@@ -12,13 +13,31 @@ module.exports = {
       next(e);
     }
   },
-
-  add: async (req, res, next) => {
+  addInventory: async (req, res, next) => {
     try {
-const reg = {
-        message: "add",
+      let file = await util.openStorage(storage);
+      let newFile = file.push(req.body.item);
+      util.writeStorage(storage, newFile);
+      const reg = {
+        message: `Se agrego ${req.body.issn} al inventario`,
       };
-      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
+  updateInventory: async (req, res, next) => {
+    try {
+      let file = await util.openStorage(storage);
+      let index = util.fieldFinder(file, "issn", req.body.data.issn);
+      file[index] = req.body.data;
+
+      util.writeStorage(storage, file);
+      const reg = {
+        message: `Se modifico el registro ${req.body.issn}`,
+      };
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
