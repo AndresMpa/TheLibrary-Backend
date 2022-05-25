@@ -53,10 +53,13 @@ module.exports = {
   remove: async (req, res, next) => {
     try {
       let file = await util.openStorage(storage);
-      let index = util.fieldFinder(file, "issn", req.body.issn);
-      util.writeStorage(file.slice(index, index), storage);
+      req.body.buying.forEach((item) => {
+        let index = util.fieldFinder(file, "issn", item.issn);
+        file.splice(index, 1);
+      });
+      util.writeStorage(file, storage);
       const reg = {
-        message: `Ejemplar ${req.body.issn} eliminado`,
+        message: `Proceso de eliminación completo`,
       };
       res.status(200).json(reg);
     } catch (e) {
