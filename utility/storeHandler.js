@@ -24,7 +24,7 @@ module.exports = {
   },
   // Función para escribir los datos del storage, complementa
   // openStorage()
-  writeStorage: async (path, ext = "json", content) => {
+  writeStorage: async (content, path, ext = "json") => {
     try {
       await fs.writeFile(`${path}.${ext}`, JSON.stringify(content));
     } catch (error) {
