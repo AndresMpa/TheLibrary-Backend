@@ -41,7 +41,7 @@ module.exports = {
       next(e);
     }
   },
-  returned: async (req, res, next) => {
+  purchased: async (req, res, next) => {
     try {
       let file = await util.openStorage(storage);
       let user = util.fieldFinder(file, "user", req.body.username);
@@ -58,7 +58,9 @@ module.exports = {
     try {
       let file = await util.openStorage(storage);
       let user = util.fieldFinder(file, "user", req.body.username);
-      const reg = file[user]["story"].filter((item) => item.status === "purple");
+      const reg = file[user]["story"].filter(
+        (item) => item.status === "purple"
+      );
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -67,11 +69,23 @@ module.exports = {
       next(e);
     }
   },
-
-  add: async (req, res, next) => {
+  addStory: async (req, res, next) => {
     try {
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      console.log(req.body);
+      
+      req.body.items.forEach((item) => {
+        item.date = util.getDate();
+        item.method = "Contra envio";
+        item.delivery = "Enviado";
+        item.status = "blue";
+        file[user]["story"].push(item);
+      });
+
+      util.writeStorage(file, storage);
       const reg = {
-        message: "created",
+        message: `Historial actualizado`,
       };
       res.status(200).json(reg);
     } catch (e) {

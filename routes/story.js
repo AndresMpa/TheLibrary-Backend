@@ -4,9 +4,10 @@ const storyController = require('../controllers/storyController');
 const router = routerx();
 
 router.post('/all', storyController.all);
+router.post('/reserves', storyController.reserves);
+router.post('/add-story', storyController.addStory);
 router.post('/cancelled', storyController.cancelled);
 router.post('/delivered', storyController.delivered);
-router.post('/returned', storyController.returned);
-router.post('/reserves', storyController.reserves);
+router.post('/purchased', storyController.purchased);
 
 module.exports = router;
