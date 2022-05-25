@@ -11,6 +11,7 @@ module.exports = {
         username: user.user_account,
         feed: user.news_feed,
         preferences: user.preferences,
+        profile: user.profile,
       },
       "config.secret",
       {
