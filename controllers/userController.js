@@ -1,45 +1,31 @@
+const storage = `${process.cwd()}/dataStorage/users`;
 const tokenService = require("../services/token");
-const bcrypt = require("bcryptjs/dist/bcrypt");
+//const bcrypt = require("bcryptjs/dist/bcrypt");
+const util = require("../utility/storeHandler");
 
 module.exports = {
   signin: async (req, res, next) => {
     try {
       //Acá se ha de hacer una función que vaya a los registros de usuario y valide si el registro existe
-      if (req.body.name === "admin" && req.body.password === "123") {
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "userName", req.body.name);
+
+      if (req.body.password === file[user]["password"]) {
         // Acá se crean las respuestas usando el servicios, todos los registros tiene que tener la estructura de abajo
         let tokenReturn = await tokenService.encode(
           // Acá es donde ser cargan los archivos
           {
-            permission: 1,
-            mail: "",
-            address: "",
-            user_account: "Admin",
-            password: "",
-            news_feed: false,
-            preferences: [],
+            permission: file[user]["permission"],
+            mail: file[user]["mail"],
+            address: file[user]["address"],
+            user_account: file[user]["userName"],
+            news_feed: file[user]["news"],
+            preferences: file[user]["preferences"],
+            profile: file[user]["profile"],
           }
         );
         // Si el tipo de usuario no es Administrador se debería de responder auth false
         res.status(200).json({ auth: true, tokenReturn });
-      }
-
-      //Acá se ha de hacer una función que vaya a los registros de usuario y valide si el registro existe
-      if (req.body.name === "user" && req.body.password === "123") {
-        // Acá se crean las respuestas usando el servicios, todos los registros tiene que tener la estructura de abajo
-        let tokenReturn = await tokenService.encode(
-          // Acá es donde ser cargan los archivos
-          {
-            permission: 0,
-            mail: "testtis@gmail.com",
-            address: "Entre 2 tierras, Wualby M 33 C 12 bis 42",
-            user_account: "Test man",
-            password: "",
-            news_feed: true,
-            preferences: ["Horror"],
-          }
-        );
-        // Si el tipo de usuario no es Administrador se debería de responder auth false
-        res.status(200).json({ auth: false, tokenReturn });
       }
     } catch (e) {
       res.status(500).send({
@@ -53,8 +39,8 @@ module.exports = {
       //req.body.password = bcrypt.hashSync(req.body.password, 8);
       console.log(`Agregar ${req.body.name} a los archivos`);
       const reg = {
-        message: `Se agrego ${req.body.name}`
-      }
+        message: `Se agrego ${req.body.name}`,
+      };
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
