@@ -6,7 +6,8 @@
     "author": "Andrés Felipe Gamboa",
     "method": "Contra envio",
     "delivery": "Cancelado",
-    "user": "testman"
+    "user": "user"
+
   },
   "1": {
     "issn": "1721-9610",
@@ -15,7 +16,8 @@
     "author": "Gabriel Garcia Marquez",
     "method": "Contra envio",
     "delivery": "Completa",
-    "user": "testman"
+    "user": "user"
+
   },
   "2": {
     "issn": "6168-0024",
@@ -24,7 +26,8 @@
     "author": "Gabriel Garcia Marquez",
     "method": "Contra envio",
     "delivery": "Completa",
-    "user": "testman"
+    "user": "user"
+
   },
   "3": {
     "issn": "3469-3121",
@@ -33,7 +36,7 @@
     "author": "Gabriel Garcia Marquez",
     "method": "Contra envio",
     "delivery": "Regresado",
-    "user": "testman"
+    "user": "user"
   },
   "4": {
     "issn": "7001-1399",
@@ -42,6 +45,6 @@
     "author": "Desconocido",
     "method": "Contra envio",
     "delivery": "Reservado",
-    "user": "testman"
+    "user": "user"
   }
 }
