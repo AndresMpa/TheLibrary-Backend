@@ -1,53 +1,12 @@
-const util = require("../utility/storeHandler");
 const storage = `${process.cwd()}/dataStorage/story`;
+const util = require("../utility/storeHandler");
 
 module.exports = {
   all: async (req, res, next) => {
     try {
-      console.log(req.body.username);
-      const reg = [
-        {
-          date: "27/Mar/2002",
-          status: "green",
-          title: "El colonel no tiene quien le escriba",
-          author: "Gabriel Garcia Marquez",
-          method: "Master Card",
-          delivery: "Completa",
-        },
-        {
-          date: "8/Octubre/2008",
-          status: "red",
-          title: "Como torturar estudiantes",
-          author: "Andrés Felipe Gamboa",
-          method: "Visa",
-          delivery: "Cancelado",
-        },
-        {
-          date: "2/Abril/2012",
-          status: "blue",
-          title: "100 años de soledad",
-          author: "Gabriel Garcia Marquez",
-          method: "Master Card",
-          delivery: "Regresado",
-        },
-        {
-          date: "27/Mar/2013",
-          status: "green",
-          title: "El colonel no tiene quien le escriba, edición premium",
-          author: "Gabriel Garcia Marquez",
-          method: "Master Card",
-          delivery: "Completa",
-        },
-        {
-          date: "27/Mar/2022",
-          status: "purple",
-          title: "Sombras de mi adios",
-          author: "Desconocido",
-          method: "Master Card",
-          delivery: "Reservado",
-        },
-
-      ];
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      const reg = file[user]["story"];
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -58,16 +17,9 @@ module.exports = {
   },
   cancelled: async (req, res, next) => {
     try {
-      const reg = [
-        {
-          date: "8/Octubre/2008",
-          status: "red",
-          title: "Como torturar estudiantes",
-          author: "Andrés Felipe Gamboa",
-          method: "Visa",
-          delivery: "Cancelado",
-        },
-      ];
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      const reg = file[user]["story"].filter((item) => item.status === "red");
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -78,24 +30,9 @@ module.exports = {
   },
   delivered: async (req, res, next) => {
     try {
-      const reg = [
-        {
-          date: "27/Mar/2002",
-          status: "green",
-          title: "El colonel no tiene quien le escriba",
-          author: "Gabriel Garcia Marquez",
-          method: "Master Card",
-          delivery: "Completa",
-        },
-        {
-          date: "27/Mar/2013",
-          status: "green",
-          title: "El colonel no tiene quien le escriba, edición premium",
-          author: "Gabriel Garcia Marquez",
-          method: "Master Card",
-          delivery: "Completa",
-        },
-      ];
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      const reg = file[user]["story"].filter((item) => item.status === "green");
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -106,16 +43,9 @@ module.exports = {
   },
   returned: async (req, res, next) => {
     try {
-      const reg = [
-        {
-          date: "2/Abril/2012",
-          status: "blue",
-          title: "100 años de soledad",
-          author: "Gabriel Garcia Marquez",
-          method: "Master Card",
-          delivery: "Regresado",
-        },
-      ];
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      const reg = file[user]["story"].filter((item) => item.status === "blue");
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
@@ -126,16 +56,9 @@ module.exports = {
   },
   reserves: async (req, res, next) => {
     try {
-      const reg = [
-        {
-          date: "27/Mar/2022",
-          status: "purple",
-          title: "Sombras de mi adios",
-          author: "Desconocido",
-          method: "Master Card",
-          delivery: "Reservado",
-        },
-      ];
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      const reg = file[user]["story"].filter((item) => item.status === "purple");
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
