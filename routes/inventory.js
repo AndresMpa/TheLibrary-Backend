@@ -1,10 +1,10 @@
 const routerx = require('express-promise-router');
 const inventoryController = require('../controllers/inventoryController');
-const auth = require('../middlewares/auth');
 // Instance
 const router = routerx();
 
-router.get('/test', inventoryController.test);
-router.post('/add', auth.verifyClient, inventoryController.add);
+router.get('/raw-list', inventoryController.rawList);
+router.post('/add', inventoryController.addInventory);
+router.post('/update', inventoryController.updateInventory);
 
 module.exports = router;

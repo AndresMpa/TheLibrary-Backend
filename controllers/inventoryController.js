@@ -17,7 +17,7 @@ module.exports = {
     try {
       let file = await util.openStorage(storage);
       let newFile = file.push(req.body.item);
-      util.writeStorage(storage, newFile);
+      util.writeStorage(newFile, storage);
       const reg = {
         message: `Se agrego ${req.body.issn} al inventario`,
       };
@@ -34,10 +34,11 @@ module.exports = {
       let index = util.fieldFinder(file, "issn", req.body.data.issn);
       file[index] = req.body.data;
 
-      util.writeStorage(storage, file);
+      util.writeStorage(file, storage);
       const reg = {
         message: `Se modifico el registro ${req.body.issn}`,
       };
+      res.status(200).send(reg);
     } catch (e) {
       res.status(500).send({
         message: "Ocurrió un error",
