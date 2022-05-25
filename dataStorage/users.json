@@ -1,29 +1,29 @@
 {
   "0": {
-    "user_account": "Admin",
+    "name": "",
+    "lastName": "",
+    "userName": "admin",
     "password": "admin123",
     "permission": 1,
     "mail": "",
     "address": "",
-    "news_feed": false,
-    "preferences": []
+    "news": false,
+    "phone": "",
+    "preferences": [],
+    "profile": "https://cdn.vuetifyjs.com/images/john.jpg"
+
   },
   "1": {
-    "user_account": "Pedro Navajas",
-    "password": "La cartera o la vida",
+    "name": "",
+    "lastName": "",
+    "userName": "user",
+    "password": "user1234",
     "permission": 0,
     "mail": "una_lector_honesto@gmail.com",
     "address": "Más allá de la luna, bis 15, carrera 8 calle 12",
-    "news_feed": false,
-    "preferences": ["Crimen", "Politica", "Superación personal"]
-  },
-  "2": {
-    "user_account": "Sancochito",
-    "password": "s4nc0ch1t0",
-    "permission": 0,
-    "mail": "sancochito@gmail.com",
-    "address": "Entre 2 tierras, Manzana 13 casa 88",
-    "news_feed": true,
-    "preferences": ["Horror", "Ilustrado"]
+    "news": true,
+    "phone": "",
+    "preferences": ["Crimen", "Politica", "Superación personal"],
+    "profile": "https://cdn.vuetifyjs.com/images/john.jpg"
   }
 }

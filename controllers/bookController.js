@@ -54,7 +54,7 @@ module.exports = {
     try {
       let file = await util.openStorage(storage);
       let index = util.fieldFinder(file, "issn", req.body.issn);
-      util.writeStorage(storage, file.slice(index, index));
+      util.writeStorage(file.slice(index, index), storage);
       const reg = {
         message: `Ejemplar ${req.body.issn} eliminado`,
       };
@@ -70,7 +70,7 @@ module.exports = {
     try {
       let file = await util.openStorage(storage);
       let newFile = file.push(req.body.item);
-      util.writeStorage(storage, newFile);
+      util.writeStorage(newFile, storage);
       const reg = {
         message: `Ejemplar ${req.body.issn} creado`,
       };
@@ -88,7 +88,7 @@ module.exports = {
       const reg = [];
       file.forEach((item) => {
         if (levenshtein.get(req.body.query, item["title"]) >= 3) {
-          reg.push(item)
+          reg.push(item);
         }
       });
       if (reg.length > 0) {
