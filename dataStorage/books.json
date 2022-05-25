@@ -1,5 +1,5 @@
-{
-  "0": {
+[
+  {
     "issn": "9788-9588",
     "title": "1984",
     "author": "George Orwell",
@@ -11,12 +11,12 @@
     "release": 1949,
     "year": 1947,
     "price": 120000,
-    "discount": 0.0,
-    "summary": "1984 es una novela política de ficción distópica, escrita por George Orwell entre 1947 y 1948 y publicada el 8 de junio de 1949",
+    "discount": 0,
     "asset": "https://picsum.photos/id/11/500/300",
+    "summary": "1984 es una novela política de ficción distópica, escrita por George Orwell entre 1947 y 1948 y publicada el 8 de junio de 1949",
     "rating": 4.8
   },
-  "1": {
+  {
     "issn": "0512-2216",
     "title": "El mundo perdido",
     "author": "Arthur Conan Doyle",
@@ -28,12 +28,12 @@
     " release": 1999,
     "year": 1912,
     "price": 100000,
-    "discount": 0.0,
-    "summary": "El mundo perdido es una novela del escritor escocés Arthur Conan Doyle, sobre una expedición a una meseta sudamericana en donde aún sobreviven animales prehistóricos. Fue publicada en 1912 e introdujo al conocido personaje del profesor Challenger",
+    "discount": 0,
     "asset": "https://picsum.photos/id/11/500/300",
+    "summary": "El mundo perdido es una novela del escritor escocés Arthur Conan Doyle, sobre una expedición a una meseta sudamericana en donde aún sobreviven animales prehistóricos. Fue publicada en 1912 e introdujo al conocido personaje del profesor Challenger",
     "rating": 4.5
   },
-  "2": {
+  {
     "issn": "6034-5113",
     "title": "El maravilloso mago de Oz",
     "author": "Lyman Frank Baum",
@@ -45,12 +45,12 @@
     "release": 2016,
     "year": 1900,
     "price": 15000,
-    "discount": 0.0,
-    "summary": "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
+    "discount": 0,
     "asset": "https://picsum.photos/id/11/500/300",
+    "summary": "El maravilloso mago de Oz es un libro de literatura infantil escrito por Lyman Frank Baum e ilustrado por W. W. Denslow. Fue publicado inicialmente por la George M. Hill Company de Chicago en 1900. Desde entonces, El mago de Oz ha sido uno de los libros más editados tanto en Estados Unidos como en Europa",
     "rating": 3.8
   },
-  "3": {
+  {
     "issn": "8884-1113",
     "title": "El príncipe",
     "author": "Nicolás Maquiavelo",
@@ -63,11 +63,11 @@
     "year": 1513,
     "price": 80000,
     "discount": 0.1,
-    "summary": "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
     "asset": "https://picsum.photos/id/11/500/300",
-    "rating": 5.0
+    "summary": "El príncipe es un tratado político del siglo XVI del diplomático y teórico político italiano Nicolás Maquiavelo. Según la correspondencia de Maquiavelo, una versión parece haber sido distribuida en 1513, usando el título en latín De Principatibus",
+    "rating": 5
   },
-  "4": {
+  {
     "issn": "1234-1003",
     "title": "El Necronomicón",
     "author": "El árabeloco Abdul Alhazred",
@@ -80,8 +80,26 @@
     "year": 1,
     "price": 66000,
     "discount": 0.5,
-    "summary": "El Necronomicón es un grimorio ficticio ideado por el escritor estadounidense H. P. Lovecraft, uno de los maestros de la literatura de terror y ciencia ficción. Es mencionado por primera vez en el cuento Laciudad sinnombre de 1921 donde también se indica que su autor fue el árabeloco Abdul Alhazred",
     "asset": "https://picsum.photos/id/11/500/300",
-    "rating": 0.0
+    "summary": "El Necronomicón es un grimorio ficticio ideado por el escritor estadounidense H. P. Lovecraft, uno de los maestros de la literatura de terror y ciencia ficción. Es mencionado por primera vez en el cuento Laciudad sinnombre de 1921 donde también se indica que su autor fue el árabeloco Abdul Alhazred",
+    "rating": 0
+  },
+  {
+    "issn": "1457-7859",
+    "title": "Yo antes de ti",
+    "author": "Jojo Moyes",
+    "genre": "Novela",
+    "status": "Disponible",
+    "pages": 258,
+    "editorial": "Atenea",
+    "language": "Español",
+    "release": 2012,
+    "year": 2012,
+    "price": 80000,
+    "discount": 0,
+    "asset": "https://images.cdn2.buscalibre.com/fit-in/360x360/5b/7c/5b7cb25f3dc6d962a06c3f0663f5bfd1.jpg",
+    "summary": "Yo antes de ti es una novela romántica de la escritora británica Jojo Moyes para jóvenes adultos publicada en 2012. En 2016 se estrenó la película basada en el libro, Me before you, protagonizada por Emilia Clarke y Sam Claflin.",
+    "rating": 0
   }
-}
+]
+

@@ -5,6 +5,7 @@ const router = routerx();
 
 router.get("/top", bookController.top);
 router.get("/list", bookController.list);
+router.post("/add", bookController.addBook);
 router.delete("/remove", bookController.remove);
 router.get("/raw-list", bookController.rawList);
 router.post("/one-book", bookController.getABook);

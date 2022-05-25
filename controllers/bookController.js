@@ -69,8 +69,8 @@ module.exports = {
   addBook: async (req, res, next) => {
     try {
       let file = await util.openStorage(storage);
-      let newFile = file.push(req.body.item);
-      util.writeStorage(newFile, storage);
+      file.push(req.body.item);
+      util.writeStorage(file, storage);
       const reg = {
         message: `Ejemplar ${req.body.issn} creado`,
       };
