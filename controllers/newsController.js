@@ -19,9 +19,6 @@ module.exports = {
     try {
       let file = await util.openStorage(storage);
       file.push(req.body);
-      console.log(req.body);
-
-      
       util.writeStorage(file, storage);
       const reg = {
         message: "Creado exitosamente"
