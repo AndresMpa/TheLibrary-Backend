@@ -117,6 +117,7 @@ module.exports = {
       user = file.length;
       req.body.items.forEach((item) => {
         item.date = util.getDate();
+        item.address = req.body.address
         item.method = "Contra envio";
         item.delivery = "Enviado";
         item.status = "blue";
