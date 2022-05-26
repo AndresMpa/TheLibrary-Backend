@@ -109,11 +109,10 @@ module.exports = {
   },
   // Regresa la fecha actual en formato DD/MM/YY
   getDate: () => {
-    let date_ob = new Date();
-    return (
-      ("0" + date_ob.getDate()).slice(-2) +
-      ("0" + (date_ob.getMonth() + 1)).slice(-2) +
-      date_ob.getFullYear()
-    );
-  }
+    let dateInstance = new Date();
+    return `${("0" + dateInstance.getDate()).slice(-2)}/${(
+      "0" +
+      (dateInstance.getMonth() + 1)
+    ).slice(-2)}/${dateInstance.getFullYear()}`;
+  },
 };
