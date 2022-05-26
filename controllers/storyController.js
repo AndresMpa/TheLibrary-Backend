@@ -2,6 +2,24 @@ const storage = `${process.cwd()}/dataStorage/story`;
 const util = require("../utility/storeHandler");
 
 module.exports = {
+  rawList: async (req, res, next) => {
+    try {
+      let file = await util.openStorage(storage);
+      let reg = [];
+      file.forEach((register) => {
+        register["story"].forEach((item) => {
+          item.user = register["user"];
+          reg.push(item);
+        });
+      });
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
   all: async (req, res, next) => {
     try {
       let file = await util.openStorage(storage);
@@ -79,7 +97,7 @@ module.exports = {
           story: [],
         });
       }
-      user = file.length
+      user = file.length;
       req.body.items.forEach((item) => {
         item.date = util.getDate();
         item.method = "Contra envio";
@@ -88,6 +106,29 @@ module.exports = {
         file[user]["story"].push(item);
       });
 
+      util.writeStorage(file, storage);
+      const reg = {
+        message: `Historial actualizado`,
+      };
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
+  updateStory: async (req, res, next) => {
+    try {
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "user", req.body.username);
+      let index = util.fieldFinder(file[user]["story"], "issn", req.body.issn);
+      const avalibleStatus = ["Cancelado", "Entregado", "Enviado", "Reservado"];
+      const current =
+        avalibleStatus.indexOf(req.body.status) + 1 >= avalibleStatus.length
+          ? 0
+          : avalibleStatus.indexOf(req.body.status) + 1;
+      file[user]["story"][index]["delivery"] = avalibleStatus[current];
       util.writeStorage(file, storage);
       const reg = {
         message: `Historial actualizado`,
