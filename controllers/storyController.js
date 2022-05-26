@@ -1,6 +1,23 @@
 const storage = `${process.cwd()}/dataStorage/story`;
 const util = require("../utility/storeHandler");
 
+// Utilidades para el controlador
+const getNextStatus = (status) => {
+  const avalibleStatus = {
+    Cancelado: "red",
+    Entregado: "green",
+    Enviado: "blue",
+    Reservado: "purple",
+  };
+  let currentIndex = Object.keys(avalibleStatus).indexOf(status) + 1;
+  if (currentIndex > 3) {
+    currentIndex = 0;
+  }
+  let key = Object.keys(avalibleStatus)[currentIndex];
+  let value = avalibleStatus[key];
+  return [key, value];
+};
+
 module.exports = {
   rawList: async (req, res, next) => {
     try {
@@ -123,12 +140,9 @@ module.exports = {
       let file = await util.openStorage(storage);
       let user = util.fieldFinder(file, "user", req.body.username);
       let index = util.fieldFinder(file[user]["story"], "issn", req.body.issn);
-      const avalibleStatus = ["Cancelado", "Entregado", "Enviado", "Reservado"];
-      const current =
-        avalibleStatus.indexOf(req.body.status) + 1 >= avalibleStatus.length
-          ? 0
-          : avalibleStatus.indexOf(req.body.status) + 1;
-      file[user]["story"][index]["delivery"] = avalibleStatus[current];
+      let nextStatus = getNextStatus(req.body.status);
+      file[user]["story"][index]["delivery"] = nextStatus[0];
+      file[user]["story"][index]["status"] = nextStatus[1];
       util.writeStorage(file, storage);
       const reg = {
         message: `Historial actualizado`,
