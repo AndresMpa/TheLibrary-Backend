@@ -1,6 +1,1 @@
-[
-  {
-    "user": "user",
-    "story": []
-  }
-]
+[{"user":"user","story":[{"issn":"1234-1003","title":"El Necronomicón","author":"El árabeloco Abdul Alhazred","genre":"Ficción","status":"blue","pages":668,"editorial":"Hades","language":"Rlyeh","release":1600,"year":1,"price":66000,"discount":0.5,"asset":"https://picsum.photos/id/11/500/300","summary":"El Necronomicón es un grimorio ficticio ideado por el escritor estadounidense H. P. Lovecraft, uno de los maestros de la literatura de terror y ciencia ficción. Es mencionado por primera vez en el cuento Laciudad sinnombre de 1921 donde también se indica que su autor fue el árabeloco Abdul Alhazred","rating":0,"date":"26/05/2022","address":"Macedonia palacio principal, cuarto 1, puerta 1","method":"Contra envio","delivery":"Enviado"}]}]
