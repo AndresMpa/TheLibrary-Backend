@@ -17,6 +17,15 @@ module.exports = {
 
   add: async (req, res, next) => {
     try {
+      let file = await util.openStorage(storage);
+      file.push(req.body);
+      console.log(req.body);
+
+      
+      util.writeStorage(file, storage);
+      const reg = {
+        message: "Creado exitosamente"
+      }
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({
