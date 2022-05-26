@@ -1,52 +1,48 @@
-{
-  "0": {
+[
+  {
     "user": "user",
     "story": [
       {
-        "issn": "0708-1528",
-        "date": "8/Feb/2022",
-        "title": "Como torturar estudiantes",
-        "author": "Andrés Felipe Gamboa",
+        "issn": "1457-7859",
+        "title": "Yo antes de ti",
+        "author": "Jojo Moyes",
+        "genre": "Novela",
+        "status": "blue",
+        "pages": 258,
+        "editorial": "Atenea",
+        "language": "Español",
+        "release": 2012,
+        "year": 2012,
+        "price": 80000,
+        "discount": 0,
+        "asset": "https://images.cdn2.buscalibre.com/fit-in/360x360/5b/7c/5b7cb25f3dc6d962a06c3f0663f5bfd1.jpg",
+        "summary": "Yo antes de ti es una novela romántica de la escritora británica Jojo Moyes para jóvenes adultos publicada en 2012. En 2016 se estrenó la película basada en el libro, Me before you, protagonizada por Emilia Clarke y Sam Claflin.",
+        "rating": 0,
+        "date": "25052022",
         "method": "Contra envio",
-        "delivery": "Cancelado",
-        "status": "red"
+        "delivery": "Enviado"
       },
       {
-        "issn": "1721-9610",
-        "date": "27/Mar/2022",
-        "title": "El colonel no tiene quien le escriba",
-        "author": "Gabriel Garcia Marquez",
+        "issn": "1234-1003",
+        "title": "El Necronomicón",
+        "author": "El árabeloco Abdul Alhazred",
+        "genre": "Ficción",
+        "status": "blue",
+        "pages": 668,
+        "editorial": "Hades",
+        "language": "Rlyeh",
+        "release": 1600,
+        "year": 1,
+        "price": 66000,
+        "discount": 0.5,
+        "asset": "https://picsum.photos/id/11/500/300",
+        "summary": "El Necronomicón es un grimorio ficticio ideado por el escritor estadounidense H. P. Lovecraft, uno de los maestros de la literatura de terror y ciencia ficción. Es mencionado por primera vez en el cuento Laciudad sinnombre de 1921 donde también se indica que su autor fue el árabeloco Abdul Alhazred",
+        "rating": 0,
+        "date": "25/05/2022",
         "method": "Contra envio",
-        "delivery": "Completa",
-        "status": "green"
-      },
-      {
-        "issn": "6168-0024",
-        "date": "27/Mar/2022",
-        "title": "El colonel no tiene quien le escriba, edición premium",
-        "author": "Gabriel Garcia Marquez",
-        "method": "Contra envio",
-        "delivery": "Completa",
-        "status": "green"
-      },
-      {
-        "issn": "3469-3121",
-        "date": "2/Abril/2022",
-        "title": "100 años de soledad",
-        "author": "Gabriel Garcia Marquez",
-        "method": "Contra envio",
-        "delivery": "Enviado",
-        "status": "blue"
-      },
-      {
-        "issn": "7001-1399",
-        "date": "19/May/2022",
-        "title": "Sombras de mi adios",
-        "author": "Desconocido",
-        "method": "Contra envio",
-        "delivery": "Reservado",
-        "status": "purple"
+        "delivery": "Enviado"
       }
     ]
   }
-}
+]
+

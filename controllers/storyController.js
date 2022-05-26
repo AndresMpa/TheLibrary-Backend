@@ -73,8 +73,13 @@ module.exports = {
     try {
       let file = await util.openStorage(storage);
       let user = util.fieldFinder(file, "user", req.body.username);
-      console.log(req.body);
-      
+      if (user === -1) {
+        file.push({
+          user: req.body.username,
+          story: [],
+        });
+      }
+      user = file.length
       req.body.items.forEach((item) => {
         item.date = util.getDate();
         item.method = "Contra envio";
