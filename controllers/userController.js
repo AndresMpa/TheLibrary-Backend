@@ -55,4 +55,33 @@ module.exports = {
       next(e);
     }
   },
+  updateAccount: async (req, res, next) => {
+    try {
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "userName", req.body.userName);
+      file[user] = req.body;
+      util.writeStorage(file, storage);
+      const reg = {
+        message: `La cuenta ha sido actualizada`,
+      };
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrio un error",
+      });
+      next(e);
+    }
+  },
+  userInformation: async (req, res, next) => {
+    try {
+      let file = await util.openStorage(storage);
+      let user = util.fieldFinder(file, "userName", req.body.username);
+      res.status(200).json(file[user]);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrio un error",
+      });
+      next(e);
+    }
+  },
 };
